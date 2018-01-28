@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<movies>
+	<movie>
+		<title>Se7en</title>
+		<year>1995</year>
+		<genre>crime</genre>
+		<actor>
+			<name>
+				<firstname>Morgan</firstname>
+				<lastname>Freeman</lastname>
+			</name>
+			<dob>06-01-1937</dob>
+		</actor>
+	</movie>
+</movies>
