@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="movies">
+        <xs:element name="movie" minOccurs="1">
+            <xs:element name="tile" type="xs:string" use="required" />
+            <xs:element name="year">
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="\d{4}"/>
+                </xs:restriction>
+            </xs:element>
+            <xs:element name="genre">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Action" />
+                        <xs:enumeration value="Adventure" />
+                        <xs:enumeration value="Comedy" />
+                        <xs:enumeration value="Drama" />
+                        <xs:enumeration value="Fantasy" />
+                        <xs:enumeration value="Horror" />
+                        <xs:enumeration value="Mystery" />
+                        <xs:enumeration value="Thriller" />
+                        <xs:enumeration value="Western" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:element>
+        <xs:element name="actor" minOccurs="1">
+            <xs:element name="actorName">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="firstName" type="xs:string" />
+                        <xs:element name="lastName" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+             <xs:element name="dob" type="xs:date" />
+        </xs:element>
+    </xs:element>
+</xs:schema>
