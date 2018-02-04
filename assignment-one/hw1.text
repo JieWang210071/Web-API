@@ -1,0 +1,73 @@
+Host: www.googleapis.com
+
+the domain name of the server
+
+Cache-Control: no-cache
+
+the client will not accept a cached resource unless it has been revalidated
+
+Postman-Token: 3afde20a-adeb-36dc-79aa-4f17f9ce9f5d
+
+used to bypass a bug in Chrome
+
+Alt-Svc →hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+
+Alternative Services. allow an origin’s resources to be authoritatively available at a separate network location, possibly accessed with a different protocol configuration
+
+Cache-Control →private, max-age=0, must-revalidate, no-transform
+
+private indicates that the response is intended for a single user
+
+max-age sets a relative expiration time from the time the response is generated
+
+must-revalidate tells the client to bypass its freshness calculation and always revalidate with the server
+
+no-transform indicates a nontransparent proxy to save cache space
+
+Content-Encoding →gzip
+
+the type of encoding applied to the entity.
+
+Content-Type →application/json; charset=UTF-8
+
+the media type of the request body.
+
+Date →Sun, 04 Feb 2018 03:11:45 GMT
+
+The data and time that the response was sent
+
+ETag →"f6QLsd8inUgRKJVNBqJ8xHnPb0w/WUz2rQJrXODOvo8xyIDvrk0gm8E"
+
+the MD5 hash of the entity and used to check for modifications
+
+Expires →Sun, 04 Feb 2018 03:11:45 GMT
+
+a timestamp of when then the entity expires
+
+Server →GSE
+
+A name of server. Google Servlet Engine
+
+Transfer-Encoding →chunked
+
+the form of encoding used to safely transfer the entity to the user
+
+Vary →Origin
+
+determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server
+
+Vary →X-Origin
+
+determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server
+
+X-Content-Type-Options →nosniff
+
+prevents the browser from doing MIME-type sniffing
+
+X-Frame-Options →SAMEORIGIN
+
+indicate whether or not a browser should be allowed to render a page
+
+X-XSS-Protection →1; mode=block
+
+stops pages from loading when they detect reflected cross-site scripting attacks

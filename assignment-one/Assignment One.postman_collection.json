@@ -1,0 +1,101 @@
+{
+	"info": {
+		"name": "Assignment One",
+		"_postman_id": "0302ab01-004e-c9f8-3d5f-2a75a007b290",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "books",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "37238430-d78f-4e30-9fc2-8570b5e27d5e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.environment.set(\"book_title\", \"Turing\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe0e2519-4ddc-45b9-b0fc-0c62180cd9e7",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"1.Response status 200\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"books",
+						"v1",
+						"volumes"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{book_title}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9bfbf0fe-5818-4a32-8a8c-b38e929bb642",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"1.Response status 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"books",
+						"v1",
+						"volumes",
+						"{{id}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
